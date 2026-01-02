@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>DM Joki Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+    }
+    header h1 {
+      margin: 0;
+    }
+    section {
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    .card {
+      background: #020617;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 5px;
+    }
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 12px;
+      background: #22c55e;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #16a34a;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.7;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>DM Joki Store</h1>
+  <p>Fast • Aman • Profesional</p>
+</header>
+
+<section>
+
+  <div class="card">
+    <h3>Paket Joki DM</h3>
+    <ul>
+      <li>DM Basic — Rp50.000</li>
+      <li>DM Fast — Rp100.000</li>
+      <li>DM Pro — Rp150.000</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Form Order</h3>
+
+    <label>Nama</label>
+    <input id="nama" placeholder="Nama kamu">
+
+    <label>ID Game</label>
+    <input id="idgame" placeholder="ID / Username">
+
+    <label>Pilih Paket</label>
+    <select id="paket">
+      <option>DM Basic</option>
+      <option>DM Fast</option>
+      <option>DM Pro</option>
+    </select>
+
+    <label>Catatan Tambahan</label>
+    <textarea id="catatan" placeholder="Contoh: target rank, deadline"></textarea>
+
+    <button onclick="kirimWA()">Order via WhatsApp</button>
+  </div>
+
+  <div class="card">
+    <h4>Syarat & Ketentuan</h4>
+    <p>
+      - Joki memiliki risiko sesuai kebijakan game<br>
+      - Kami tidak bertanggung jawab atas banned akun<br>
+      - Dengan order, berarti setuju
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 DM Joki Store
+</footer>
+
+<script>
+  function kirimWA() {
+    const nama = document.getElementById("nama").value;
+    const idgame = document.getElementById("idgame").value;
+    const paket = document.getElementById("paket").value;
+    const catatan = document.getElementById("catatan").value;
+
+    const nomorAdmin = "628XXXXXXXXXX"; // GANTI DENGAN NOMOR WA KAMU
+
+    const pesan =
+      `Halo Admin, saya ingin order joki DM%0A%0A` +
+      `Nama: ${nama}%0A` +
+      `ID Game: ${idgame}%0A` +
+      `Paket: ${paket}%0A` +
+      `Catatan: ${catatan}`;
+
+    window.open(`https://wa.me/${nomorAdmin}?text=${pesan}`, "_blank");
+  }
+</script>
+
+</body>
+</html>https://github.com/yagasuha-dotcom/CLINT.git
